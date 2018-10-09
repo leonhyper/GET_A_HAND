@@ -1,6 +1,21 @@
 let issues = require('../models/issues');
 let express = require('express');
 let router = express.Router();
+let mongoose = require('mongoose');
+let db = mongoose.connection;
+
+
+var Issue = require('../models/issues');
+mongoose.connect('mongodb://localhost:27017/issuesdb');
+
+db.on('error', function (err) {
+    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
+});
+
+db.once('open', function () {
+    console.log('Successfully Connected to [ ' + db.name + ' ]');
+});
+
 
 router.findAll = (req,res) => {
     res.setHeader('Content-Type', 'application/json');
