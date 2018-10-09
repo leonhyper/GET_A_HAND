@@ -4,7 +4,6 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let db = mongoose.connection;
 
-var Issue = require('../models/issues');
 mongoose.connect('mongodb://localhost:27017/issuesdb');
 
 db.on('error', function (err) {
@@ -20,7 +19,7 @@ router.findAll = (req, res) => {
     // Return a JSON representation of our list
     res.setHeader('Content-Type', 'application/json');
 
-    Issue.find(function(err, issues) {
+    issues.find(function(err, issues) {
         if (err)
             res.send(err);
 
@@ -31,15 +30,27 @@ router.findAll = (req, res) => {
 router.findById = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
+    // var result = [];
+    // for(var issue in issues) {
+    //     if (issue._id.ObjectId.search(req.params.id) != -1)
+    //         result.push(issue);
+    // }
+    //     if(result!=null)
+    //         res.send(JSON.stringify(result,null,5));
+    //     else
+    //         res.send("Issue not found!");
 
-    var issue = getByValue(issues,req.params.id);
 
-    if (issue != null)
-        res.send(JSON.stringify(issue,null,5));
-    else
-        res.send('Issues NOT Found!!');
-
+    issues.find({ "_id" : req.params.id },function(err, issue) {
+        if (err)
+            res.send(err);
+        // return a suitable error message
+        else
+            res.send(JSON.stringify(issue,null,5));
+        // return the donation
+    });
 }
+
 router.findByCate = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
