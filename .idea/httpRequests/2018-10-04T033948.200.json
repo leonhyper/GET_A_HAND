@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1000001,
+    "category": "Academy",
+    "status": false,
+    "solution": 1,
+    "solutionList": [
+      1000003
+    ]
+  },
+  {
+    "id": 1000003,
+    "category": "Academy",
+    "status": false,
+    "solution": 0,
+    "solutionList": []
+  }
+]

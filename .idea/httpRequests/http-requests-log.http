@@ -1,0 +1,480 @@
+GET http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T052813.200.json
+
+###
+
+DELETE http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T052800.404.html
+
+###
+
+DELETE http://localhost:3000/issues/1000002?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T052753.200.json
+
+###
+
+GET http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T052741.200.json
+
+###
+
+PUT http://localhost:3000/issues/1000002/solve?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T051929.200.json
+
+###
+
+GET http://localhost:3000/issues/solved/false?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T050308.200.json
+
+###
+
+GET http://localhost:3000/issues/solved/true?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T050113.200.json
+
+###
+
+GET http://localhost:3000/issues/category/bus?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T045958.200.json
+
+###
+
+GET http://localhost:3000/issues/category/1000000?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T045930.200.json
+
+###
+
+GET http://localhost:3000/issues/category/1000001?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T045836.200.json
+
+###
+
+GET http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T045820.200.json
+
+###
+
+GET http://localhost:3000/issues/solved/true?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-08T045654.200.json
+
+###
+
+GET http://localhost:3000/issues/category/us?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-04T034003.200.json
+
+###
+
+GET http://localhost:3000/issues/category/aca?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-04T033948.200.json
+
+###
+
+GET http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-04T033913.200.json
+
+###
+
+POST http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+<> 2018-10-04T033903.200.json
+
+###
+
+POST http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : 0, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+###
+
+POST http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id" : id, "category" :"Academy" , "status" : false, "solution" : 0, "solutionList" : []}
+
+###
+
+GET http://localhost:3000/issues/category/aca?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T031509.200.json
+
+###
+
+GET http://localhost:3000/issues/1000000?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T031500.200.json
+
+###
+
+GET http://localhost:3000/issues/bus?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T031450.200.json
+
+###
+
+GET http://localhost:3000/issues/bus?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T024637.200.json
+
+###
+
+GET http://localhost:3000/issues/bus?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021932.200.json
+
+###
+
+GET http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021927.200.json
+
+###
+
+GET http://localhost:3000/issues?category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021757.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021746.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021640-1.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021640.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021639-5.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021639-4.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021639-3.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021639-2.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021639-1.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021639.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021638.200.json
+
+###
+
+GET http://localhost:3000/issues/bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021636.200.json
+
+###
+
+GET http://localhost:3000/issues/10000001
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021628.200.json
+
+###
+
+GET http://localhost:3000/issues/10000001
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/issues/10000001
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021505.200.json
+
+###
+
+GET http://localhost:3000/issues/10000001
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021446.200.json
+
+###
+
+GET http://localhost:3000/issues/1000000?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus&id=1000001
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021414.200.json
+
+###
+
+GET http://localhost:3000/issues?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus&id=1000001
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021357.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021114-3.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021114-2.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021114-1.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021114.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021113-4.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021113-3.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021113-2.200.json
+
+###
+
+GET http://localhost:3000/issues/aca?category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=Business&category=bus&category=bus
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-04T021113-1.200.json
+
+###
+

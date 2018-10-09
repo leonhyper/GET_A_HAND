@@ -1,0 +1,10 @@
+{
+  "message": "Update Successful.Issue set solved",
+  "issue": {
+    "id": 1000002,
+    "category": "Life_trifles",
+    "status": true,
+    "solution": 0,
+    "solutionList": []
+  }
+}
