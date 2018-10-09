@@ -4,7 +4,6 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let db = mongoose.connection;
 
-
 var Issue = require('../models/issues');
 mongoose.connect('mongodb://localhost:27017/issuesdb');
 
@@ -17,9 +16,16 @@ db.once('open', function () {
 });
 
 
-router.findAll = (req,res) => {
+router.findAll = (req, res) => {
+    // Return a JSON representation of our list
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(issues,null,5));
+
+    Issue.find(function(err, issues) {
+        if (err)
+            res.send(err);
+
+        res.send(JSON.stringify(issues,null,5));
+    });
 }
 
 router.findById = (req, res) => {
