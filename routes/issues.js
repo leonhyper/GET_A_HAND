@@ -29,19 +29,19 @@ router.findAll = (req, res) => {
 
 router.findById = (req, res) => {
 
-    res.setHeader('Content-Type', 'application/json');
+    // res.setHeader('Content-Type', 'application/json');
     // var result = [];
-    // for(var issue in issues) {
-    //     if (issue._id.ObjectId.search(req.params.id) != -1)
-    //         result.push(issue);
-    // }
+    // issues.find().forEach(function(obj){
+    //     if (obj._id.search(req.params.id) != -1)
+    //         result.push(obj);
+    // })
     //     if(result!=null)
     //         res.send(JSON.stringify(result,null,5));
     //     else
     //         res.send("Issue not found!");
 
 
-    issues.find({ "_id" : req.params.id },function(err, issue) {
+    issues.find({ "_id" :req.params.id },function(err, issue) {
         if (err)
             res.send(err);
         // return a suitable error message
@@ -55,20 +55,32 @@ router.findByCate = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
 
-    var result = [];
-    var text = req.params.category;
-    issues.forEach(function(issue){
-        if(issue.category.toUpperCase().search(text.toUpperCase())>-1){
-            result.push(issue);
-        }
-    })
+    var whereStr = {'category':{$regex:req.params.category,$options:'i'}};
 
-    if (result != null)
-        res.send(JSON.stringify(result,null,5));
-    else
-        res.send('Category NOT Found!!');
+    issues.find(whereStr ,function(err, issue) {
+        if (err)
+        res.send(err);
+        // return a suitable error message
+        else
+            res.send(JSON.stringify(issue,null,5));
+        // return the donation
+    });
+
+    // var result = [];
+    // var text = req.params.category;
+    // for(var obj in issues){
+    //     if(obj.category === text){
+    //         result.push(obj);
+    //     }
+    // }
+    //
+    // if (result != null)
+    //     res.send(JSON.stringify(result,null,5));
+    // else
+    //     res.send('Category NOT Found!!');
 
 }
+
 router.findByStatus = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
      var result = [];
