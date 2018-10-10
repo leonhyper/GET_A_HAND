@@ -106,15 +106,27 @@ router.findByStatus = (req, res) => {
 }
 router.addIssue = (req, res) => {
     //Add a new donation to our list
-    var id = issues[issues.length-1].id+1; //Randomly generate an id
-    var currentSize = issues.length;
+    // var id = issues[issues.length-1].id+1; //Randomly generate an id
+    // var currentSize = issues.length;
+    //
+    // issues.push({"id" : id, "category" : req.body.category, "status" : false, "solution" : 0, "solutionList" : []});
+    //
+    // if((currentSize + 1) == issues.length)
+    //     res.json({ message: 'Issue Added Successfully!'});
+    // else
+    //     res.json({ message: 'Issue NOT Added!'});
+    res.setHeader('Content-Type', 'application/json');
 
-    issues.push({"id" : id, "category" : req.body.category, "status" : false, "solution" : 0, "solutionList" : []});
+    var issue = new issues();
 
-    if((currentSize + 1) == issues.length)
-        res.json({ message: 'Issue Added Successfully!'});
-    else
-        res.json({ message: 'Issue NOT Added!'});
+    issue.category = req.body.category;
+
+    issue.save(function(err) {
+        if (err)
+            res.json({ message: 'Issue NOT Added!', errmsg : err } );
+        else
+            res.json({ message: 'Issue Successfully Added!', data: issue });
+    });
 }
 
 router.updateStatus = (req, res) =>{
