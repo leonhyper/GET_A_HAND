@@ -131,13 +131,26 @@ router.addIssue = (req, res) => {
 
 router.updateStatus = (req, res) =>{
     //find a certain issue by id and update 'unsolved'(false) status to 'solved'(true) status
-    var issue = getByValue(issues, req.params.id);
-
-    if(issue != null){
-        issue.status = true;
-        res.json({ message : 'Update Successful.Issue set solved' , issue : issue });
-    }else
-        res.send('Issue NOT Found - Update NOT Successful!!');
+    // var issue = getByValue(issues, req.params.id);
+    //
+    // if(issue != null){
+    //     issue.status = true;
+    //     res.json({ message : 'Update Successful.Issue set solved' , issue : issue });
+    // }else
+    //     res.send('Issue NOT Found - Update NOT Successful!!');
+    issues.findById(req.params.id, function(err,issue){
+        if (err)
+            res.json({ message: 'Donation NOT Found!', errmsg : err } );
+        else{
+            issue.status = 1;
+            issue.save(function (err) {
+                if (err)
+                    res.json({ message: 'Issue NOT Updated to Solved!', errmsg : err } );
+                else
+                    res.json({ message: 'Issue Successfully Set Solved!', data: issue });
+            });
+        }
+    })
 }
 
 router.deleteIssue = (req, res) =>{
@@ -158,6 +171,7 @@ router.deleteIssue = (req, res) =>{
             res.json({ message: 'Issue Successfully Deleted!'});
     });
 }
+
 function getByValue(array, id) {
     var result  = array.filter(function(obj){return obj.id == id;} );
     return result ? result[0] : null; // or undefined
