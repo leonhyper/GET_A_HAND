@@ -83,17 +83,25 @@ router.findByCate = (req, res) => {
 
 router.findByStatus = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-     var result = [];
-     issues.forEach(function(issue){
-         if(issue.status.toString() == req.params.status){
-             result.push(issue);
-         }
-     })
 
-    if (result != null)
-        res.send(JSON.stringify(result,null,5));
-    else
-        res.send('Issues NOT Found!!');
+    issues.find({ status :req.params.status },function(err, issue) {
+        if (err)
+            res.send(err);
+        // return a suitable error message
+        else
+            res.send(JSON.stringify(issue, null, 5));
+    })
+    //  var result = [];
+    //  issues.forEach(function(issue){
+    //      if(issue.status.toString() == req.params.status){
+    //          result.push(issue);
+    //      }
+    //  })
+    //
+    // if (result != null)
+    //     res.send(JSON.stringify(result,null,5));
+    // else
+    //     res.send('Issues NOT Found!!');
 
 }
 router.addIssue = (req, res) => {
