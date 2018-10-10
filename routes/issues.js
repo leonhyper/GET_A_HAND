@@ -142,15 +142,21 @@ router.updateStatus = (req, res) =>{
 
 router.deleteIssue = (req, res) =>{
     //delete a certain issue by id
-    var issue = getByValue(issues, req.params.id);
-    var index = issues.indexOf(issue);
-    var currentSize = issues.length;
-    issues.splice(index, 1);
-
-    if((currentSize - 1) == issues.length)
-        res.json({ message: 'Issue Deleted!'});
-    else
-        res.json({ message: 'Issue NOT Deleted!'});
+    // var issue = getByValue(issues, req.params.id);
+    // var index = issues.indexOf(issue);
+    // var currentSize = issues.length;
+    // issues.splice(index, 1);
+    //
+    // if((currentSize - 1) == issues.length)
+    //     res.json({ message: 'Issue Deleted!'});
+    // else
+    //     res.json({ message: 'Issue NOT Deleted!'});
+    issues.findByIdAndRemove(req.params.id, function(err) {
+        if (err)
+            res.json({ message: 'Issue NOT DELETED!', errmsg : err } );
+        else
+            res.json({ message: 'Issue Successfully Deleted!'});
+    });
 }
 function getByValue(array, id) {
     var result  = array.filter(function(obj){return obj.id == id;} );
