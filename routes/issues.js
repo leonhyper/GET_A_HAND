@@ -142,7 +142,7 @@ router.updateStatus = (req, res) =>{
         if (err)
             res.json({ message: 'Donation NOT Found!', errmsg : err } );
         else{
-            issue.status = 1;
+            issue.status = req.params.status;
             issue.save(function (err) {
                 if (err)
                     res.json({ message: 'Issue NOT Updated to Solved!', errmsg : err } );
@@ -172,10 +172,14 @@ router.deleteIssue = (req, res) =>{
     });
 }
 
+
+
 function getByValue(array, id) {
     var result  = array.filter(function(obj){return obj.id == id;} );
     return result ? result[0] : null; // or undefined
 }
+
+
 
 
 module.exports = router;
