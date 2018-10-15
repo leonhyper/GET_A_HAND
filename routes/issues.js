@@ -1,8 +1,11 @@
 let issues = require('../models/issues');
+let solutions = require('../models/solutions');
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 let db = mongoose.connection;
+
+var ObjectId = require('mongodb').ObjectId;
 
 mongoose.connect('mongodb://localhost:27017/issuesdb');
 
@@ -15,7 +18,7 @@ db.once('open', function () {
 });
 
 
-router.findAll = (req, res) => {
+router.findAllIssues = (req, res) => {
     // Return a JSON representation of our list
     res.setHeader('Content-Type', 'application/json');
 
@@ -120,6 +123,7 @@ router.addIssue = (req, res) => {
     var issue = new issues();
 
     issue.category = req.body.category;
+    // issue.issuesId = new mongoose.Types.ObjectId;
 
     issue.save(function(err) {
         if (err)
@@ -143,6 +147,7 @@ router.updateStatus = (req, res) =>{
             res.json({ message: 'Donation NOT Found!', errmsg : err } );
         else{
             issue.status = req.params.status;
+            // issue.solutions.shift();
             issue.save(function (err) {
                 if (err)
                     res.json({ message: 'Issue NOT Updated to Solved!', errmsg : err } );
@@ -172,6 +177,17 @@ router.deleteIssue = (req, res) =>{
     });
 }
 
+router.findAllSolutions = (req, res) => {
+    // Return a JSON representation of our list
+    res.setHeader('Content-Type', 'application/json');
+
+    solutions.find(function(err, solutions) {
+        if (err)
+            res.send(err);
+
+        res.send(JSON.stringify(solutions,null,5));
+    });
+}
 
 
 function getByValue(array, id) {
