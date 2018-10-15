@@ -189,13 +189,32 @@ router.findAllSolutions = (req, res) => {
     });
 }
 
+router.addSolution = (req,res) => {
+    res.setHeader('Content-Type', 'application/json');
+    var solution = new solutions();
+    
+    solution.parent = req.body.parent;
+    solution.solutionId = new mongoose.Types.ObjectId;
 
-function getByValue(array, id) {
-    var result  = array.filter(function(obj){return obj.id == id;} );
-    return result ? result[0] : null; // or undefined
+    solution.save(function(err){
+        if(err){
+            res.json({ message: 'Solution NOT Added!', errmsg : err } );
+            flag = false;
+        }
+        else{
+            issues.findById(req.params.id, function(err,issue){
+                issue.solutions.push(solution.solutionId);
+                issue.save(function (err) {
+                    if(err)
+                        console.log(errmsg);
+                });
+                res.json({message: 'solution Successfully Added!', data: solution});
+            })
+        }
+
+    })
+
 }
-
-
 
 
 module.exports = router;
