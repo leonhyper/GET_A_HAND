@@ -177,6 +177,7 @@ router.deleteIssue = (req, res) =>{
     });
 }
 
+
 router.findAllSolutions = (req, res) => {
     // Return a JSON representation of our list
     res.setHeader('Content-Type', 'application/json');
@@ -187,6 +188,16 @@ router.findAllSolutions = (req, res) => {
 
         res.send(JSON.stringify(solutions,null,5));
     });
+}
+
+router.findSolutionById = (req,res) => {
+    res.setHeader('Content-Type', 'application/json');
+    solutions.find({ solutionId:req.params.id},function (err,solution) {
+        if(err)
+            res.send(err);
+        else
+            res.send(JSON.stringify(solution,null,5));
+    })
 }
 
 router.addSolution = (req,res) => {
