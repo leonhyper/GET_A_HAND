@@ -192,27 +192,47 @@ router.findAllSolutions = (req, res) => {
 router.addSolution = (req,res) => {
     res.setHeader('Content-Type', 'application/json');
     var solution = new solutions();
-    
+
     solution.parent = req.body.parent;
     solution.solutionId = new mongoose.Types.ObjectId;
 
-    solution.save(function(err){
-        if(err){
-            res.json({ message: 'Solution NOT Added!', errmsg : err } );
-            flag = false;
-        }
+    issues.findById(req.body.parent,function(err,issue){
+        if(err)
+            res.json({ message: 'Parent Issue NOT Found! Solution NOT Added!', errmsg : err });
         else{
-            issues.findById(req.params.id, function(err,issue){
-                issue.solutions.push(solution.solutionId);
-                issue.save(function (err) {
-                    if(err)
-                        console.log(errmsg);
-                });
-                res.json({message: 'solution Successfully Added!', data: solution});
+            solution.save(function(err){
+                if(err){
+                    res.json({ message: 'Solution NOT Added!', errmsg : err } );
+                }
+                else{
+                    issue.solutions.push(solution.solutionId);
+                    issue.save(function (err) {
+                        if(err)
+                            res.json({ message: 'Solution NOT Added!', errmsg : err } );
+                        else
+                            res.json({message: 'solution Successfully Added!', data: solution});
+                    });
+                }
             })
         }
-
     })
+
+    // solution.save(function(err){
+    //     if(err){
+    //         res.json({ message: 'Solution NOT Added!', errmsg : err } );
+    //     }
+    //     else{
+    //         issues.findById(req.params.id, function(err,issue){
+    //             issue.solutions.push(solution.solutionId);
+    //             issue.save(function (err) {
+    //                 if(err)
+    //                     console.log(errmsg);
+    //             });
+    //             res.json({message: 'solution Successfully Added!', data: solution});
+    //         })
+    //     }
+    //
+    // })
 
 }
 

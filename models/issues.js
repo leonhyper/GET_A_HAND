@@ -1,10 +1,13 @@
 let mongoose = require('mongoose');
 
+Schema = mongoose.Schema;
+
 let IssueSchema = new mongoose.Schema({
+        // issuesId: Schema.Types.ObjectId,
         category: String,
-        status: Boolean ,
+        status: {type: Boolean , default: false},
         solutions: []
     },
-    { collection: 'issuesdb' });
+    { collection: 'Issues' });
 
-module.exports = mongoose.model('Issue', IssueSchema);
+module.exports = mongoose.model('issues', IssueSchema);

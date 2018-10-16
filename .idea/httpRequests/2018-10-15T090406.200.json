@@ -1,0 +1,51 @@
+[
+  {
+    "like": 0,
+    "_id": "5bc4895dc1d302409887996e",
+    "parent": "5bc348ae6240da3bd082672a",
+    "solutionId": "5bc4895dc1d302409887996f",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bc489b6bb755d4d242a28af",
+    "parent": "5bc348ae6240da3bd082672a",
+    "solutionId": "5bc489b6bb755d4d242a28b0",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bc48b323bbdfd667c6aef1c",
+    "parent": "5bc348ae6240da3bd082672a",
+    "solutionId": "5bc48b323bbdfd667c6aef1d",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bc48b593bbdfd667c6aef1e",
+    "parent": "5bc348ae6240da3bd082672a",
+    "solutionId": "5bc48b593bbdfd667c6aef1f",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bc48ba30d1e64611cd1b477",
+    "parent": "5bc348ae6240da3bd082672a",
+    "solutionId": "5bc48ba30d1e64611cd1b478",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bc48e3e06fb5e23c02014d7",
+    "parent": "5bc348ae6240da3bd082672a",
+    "solutionId": "5bc48e3e06fb5e23c02014d8",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bc48e745ae8a76bf4d3a176",
+    "parent": "5bc348ae6240da3bd082672a",
+    "solutionId": "5bc48e745ae8a76bf4d3a177",
+    "__v": 0
+  }
+]

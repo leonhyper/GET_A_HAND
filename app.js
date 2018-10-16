@@ -24,16 +24,21 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-app.get('/issues', issues.findAll);
+app.get('/issues', issues.findAllIssues);
 app.get('/issues/:id', issues.findById);
 app.get('/issues/category/:category', issues.findByCate);
 app.get('/issues/solved/:status', issues.findByStatus);
 
-app.put('/issues/:id/solve', issues.updateStatus);
+
+app.put('/issues/:id/:status', issues.updateStatus);
 
 app.post('/issues',issues.addIssue);
 
 app.delete('/issues/:id', issues.deleteIssue);
+
+app.get('/solutions', issues.findAllSolutions);
+
+app.post('/solutions', issues.addSolution);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
