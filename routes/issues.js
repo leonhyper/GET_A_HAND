@@ -200,6 +200,46 @@ router.findSolutionById = (req,res) => {
     })
 }
 
+router.findByParent = (req,res) =>{
+    res.setHeader('Content-Type', 'application/json');
+    var result = {
+        parent:{
+            id: String,
+            category: String,
+            status: Boolean
+        },
+        solutionList: []
+    };
+    issues.findById(req.params.id,function(err,issue){
+        if(err)
+            res.json({ message: 'Parent Issue NOT Found!', errmsg : err });
+        else{
+            if(issue.solutions.length==0)
+                res.json({message: 'Sorry.This issue still has no solutions', data: issue});
+            else{
+                var i = 0;
+                result.parent.id = issue._id;
+                result.parent.category = issue.category;
+                result.parent.status = issue.status;
+                issue.solutions.forEach(function(id){
+                    solutions.find({solutionId: id},function(err,solution)
+                    {
+                        if(err)
+                            res.send(err);
+                        else{
+                            i++;
+                            result.solutionList.push(solution);
+                            if(i == issue.solutions.length)
+                                res.send(JSON.stringify(result,null,5));
+                        }
+                    });
+                });
+            }
+        }
+    });
+}
+
+
 router.addSolution = (req,res) => {
     res.setHeader('Content-Type', 'application/json');
     var solution = new solutions();
