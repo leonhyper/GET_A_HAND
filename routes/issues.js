@@ -147,7 +147,6 @@ router.updateStatus = (req, res) =>{
             res.json({ message: 'Donation NOT Found!', errmsg : err } );
         else{
             issue.status = req.params.status;
-            // issue.solutions.shift();
             issue.save(function (err) {
                 if (err)
                     res.json({ message: 'Issue NOT Updated to Solved!', errmsg : err } );
@@ -222,6 +221,7 @@ router.findByParent = (req,res) =>{
                 result.parent.category = issue.category;
                 result.parent.status = issue.status;
                 issue.solutions.forEach(function(id){
+                    // console.log(id);
                     solutions.find({solutionId: id},function(err,solution)
                     {
                         if(err)
@@ -237,6 +237,27 @@ router.findByParent = (req,res) =>{
             }
         }
     });
+}
+
+router.increaseLike = (req,res) => {
+
+    solutions.find({"solutionId": req.params.id},function (err,solution) {
+        if(err)
+            res.json({ message: 'Solution NOT Found!', errmsg : err });
+        else{
+            solution.like ++;
+            solution.save(function (err) {
+                res.json({message: "Like successfully increased by 1.", data: solution});
+            })
+            // solution.save(function(err){
+            //     if(err)
+            //         res.json({ message: 'Adding like failed!', errmsg : err } );
+            //     else {
+            //         res.json({message: "Like successfully increased by 1.", data: solution});
+            //     }
+            // })
+        }
+    })
 }
 
 
@@ -286,6 +307,34 @@ router.addSolution = (req,res) => {
     // })
 
 }
+
+// router.deleteSolution = (req,res) => {
+//     solutions.findByIdAndRemove(req.params.id, function(err) {
+//         if (err)
+//             res.json({ message: 'Solution NOT DELETED!', errmsg : err } );
+//         else
+//             res.json({ message: 'Solution Successfully Deleted!'});
+//     });
+// }
+
+router.getParentIssue = (req,res) => {
+
+    solutions.findOne({solutionId: req.params.id},function (err,solution) {
+        if(err)
+            res.json({ message: 'Solution Does Not Exist!', errmsg : err } );
+        else{
+            issues.findById({_id: solution.parent},function(err,issue){
+                if(err)
+                    res.json({ message: 'Parent Issue Not Found!', errmsg : err } );
+                else
+                    res.json({ message: 'Parent Issue Found!',data: issue});
+            })
+        }
+    })
+
+}
+
+
 
 
 module.exports = router;
