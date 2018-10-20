@@ -241,21 +241,21 @@ router.findByParent = (req,res) =>{
 
 router.increaseLike = (req,res) => {
 
-    solutions.find({"solutionId": req.params.id},function (err,solution) {
+    solutions.findOne({"solutionId": req.params.id},function (err,solution) {
         if(err)
             res.json({ message: 'Solution NOT Found!', errmsg : err });
         else{
             solution.like ++;
-            solution.save(function (err) {
-                res.json({message: "Like successfully increased by 1.", data: solution});
-            })
-            // solution.save(function(err){
-            //     if(err)
-            //         res.json({ message: 'Adding like failed!', errmsg : err } );
-            //     else {
-            //         res.json({message: "Like successfully increased by 1.", data: solution});
-            //     }
+            // solution.save(function (err) {
+            //     res.json({message: "Like successfully increased by 1.", data: solution});
             // })
+            solution.save(function(err){
+                if(err)
+                    res.json({ message: 'Adding like failed!', errmsg : err } );
+                else {
+                    res.json({message: "Like successfully increased by 1.", data: solution});
+                }
+            })
         }
     })
 }
@@ -334,7 +334,25 @@ router.getParentIssue = (req,res) => {
 
 }
 
+router.deleteSolution = (req,res) => {
+    res.setHeader('Content-Type', 'application/json');
 
+    solutions.remove({solutionId: req.params.id},function(err,solution){
+        var s = solution.solutionId;
+        if(err)
+            res.json({ message: 'Solution Does Not Exist!', errmsg : err } );
+        else{
+            issues.update({"_id":solution.parent},{$pull:{solutions:s}},function(err,issue){
+                if(err)
+                    res.send(err);
+                else{
+                    res.json({message:'wow',data:issue,solution});
+                }
+            })
+        }
+    })
+
+}
 
 
 module.exports = router;
