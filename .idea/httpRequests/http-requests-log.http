@@ -1,11 +1,11 @@
-GET http://localhost:3000/issues
+DELETE http://localhost:3000/solutions/5bccc20c4edd4c504495ea79
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-16T045319.200.json
+<> 2018-10-22T021453.200.json
 
 ###
 
@@ -14,529 +14,509 @@ Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-16T045257.200.json
+<> 2018-10-22T021436.200.json
 
 ###
 
-GET http://localhost:3000/issues
+DELETE http://localhost:3000/solutions/5bccc1a9ebaaf60ea0dcf7
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-16T062303.200.json
+<> 2018-10-22T021430.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccc1a9ebaaf60ea0dcf72
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-16T062251.200.json
+<> 2018-10-22T021417.200.json
 
 ###
 
-GET http://localhost:3000/issues
+DELETE http://localhost:3000/solutions/5bccc1a9ebaaf60ea0dcf725
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-16T061832.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccc1a9ebaaf60ea0dcf725
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-16T061811.200.json
+<> 2018-10-22T021312.200.json
 
 ###
 
-GET http://localhost:3000/issues
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-16T061542.200.json
+<> 2018-10-22T021258.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccb4a6710530584ce5565
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-16T061402.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccb4a6710530584ce55653
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-16T061332.200.json
+<> 2018-10-22T021139.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-16T061303.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b4
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-16T061237.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-GET http://localhost:3000/solutions
+DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b4
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-15T090406.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-15T085621.200.json
+<> 2018-10-22T020816.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b4
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-15T085527.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-15T084419.200.json
+<> 2018-10-22T020251.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672
+DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-15T084306.200.json
+<> 2018-10-22T020242.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-15T084226.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-PUT http://localhost:3000/issues/5bc348ae6240da3bd082672a/0
+DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-15T083941.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-PUT http://localhost:3000/issues/5bc348ae6240da3bd082672a/0
+DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099d
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-15T083821.200.json
+<> 2018-10-22T015557.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-15T083606.200.json
+<> 2018-10-22T015547.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccb4a6710530584ce55653
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-15T083438.200.json
+<> 2018-10-22T015132.200.json
 
 ###
 
-GET http://localhost:3000/issues
+DELETE http://localhost:3000/solutions/5bccb4a6710530584ce55653
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-15T083411.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-GET http://localhost:3000/issues
+POST http://localhost:3000/solutions/5bccb4a6710530584ce55653
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T112849.200.json
+<> 2018-10-22T011732.404.html
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T111642.200.json
+<> 2018-10-22T011727.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccb234bf533e7db8993c71
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
-
-<> 2018-10-14T111505.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-GET http://localhost:3000/issues
+DELETE http://localhost:3000/solutions/5bccb234bf533e7db8993c71
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T111329.200.json
+<> 2018-10-22T011441.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccb3c4646ee643a4a23d4a
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T111316.200.json
+<> 2018-10-22T011352.200.json
 
 ###
 
-GET http://localhost:3000/issues
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T111247.200.json
+<> 2018-10-22T011340.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc34f95d64f3b61c0ea5ef9
+DELETE http://localhost:3000/solutions/5bccb234bf533e7db8993c71
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc34f95d64f3b61c0ea5ef9
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
+
+<> 2018-10-22T010700.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc34f95d64f3b61c0ea5ef9
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc34f95d64f3b61c0ea5ef9
+DELETE http://localhost:3000/solutions/5bccb0a20d8f3d7a703bcbe9
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
-
-<> 2018-10-14T110919.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-POST http://localhost:3000/solutions/5bc34f95d64f3b61c0ea5ef9
+DELETE http://localhost:3000/solutions/5bccb0a20d8f3d7a703bcbe9
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
-
-<> 2018-10-14T105802.200.json
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 ###
 
-GET http://localhost:3000/issues
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
+
+<> 2018-10-22T010018.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc34f95d64f3b61c0ea5ef9
+DELETE http://localhost:3000/solutions/5bccae96cc92a3284c2d202c
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T105733.200.json
+<> 2018-10-22T125145.200.json
 
 ###
 
-POST http://localhost:3000/solution/5bc34f95d64f3b61c0ea5ef9
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc34f95d64f3b61c0ea5ef9","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T105702.404.html
+<> 2018-10-22T125134.200.json
 
 ###
 
-POST http://localhost:3000/solution/5bc34f95d64f3b61c0ea5ef9
+DELETE http://localhost:3000/solutions/5bccad915e0be360ac8b789b
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T105617.404.html
+<> 2018-10-22T124724.200.json
 
 ###
 
-POST http://localhost:3000/solution/5bc348ae6240da3bd082672a
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T105543.404.html
+<> 2018-10-22T124713.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccac499a359b69c888221
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T104144.200.json
+<> 2018-10-22T124357.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccac499a359b69c888221
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T104105.200.json
+<> 2018-10-22T124238.500.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccac499a359b69c8882213
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T104021.200.json
+<> 2018-10-22T124237.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccac499a359b69c8882213
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T103959.200.json
+<> 2018-10-22T124222.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccabfa9ea1af31648742f3
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T103618.200.json
+<> 2018-10-22T124152.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T103358.200.json
+<> 2018-10-22T124145.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348ae6240da3bd082672a
+DELETE http://localhost:3000/solutions/5bccabfa9ea1af31648742f3
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bc348ae6240da3bd082672a","like":0}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T103209.200.json
+<> 2018-10-22T124042.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348c76240da3bd082672d
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Academy","status":0,"solutions":[]}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T102829.200.json
+<> 2018-10-22T124026.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348c76240da3bd082672d
+DELETE http://localhost:3000/solutions/5bccab35cb13fc2f7cacf627
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Academy","status":0,"solutions":[]}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T102621.200.json
+<> 2018-10-22T123723.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348c76240da3bd082672d
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Academy","status":0,"solutions":[]}
+{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
-<> 2018-10-14T102151.200.json
+<> 2018-10-22T123709.200.json
 
 ###
 
-POST http://localhost:3000/solutions/5bc348c76240da3bd082672d
+DELETE http://localhost:3000/solutions/5bcca034d07d9d6f24a23b87
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Academy","status":0,"solutions":[]}
+{"parent":"5bcb19f0f0397d0f4caf7789","like":0}
 
-<> 2018-10-14T101551.200.json
+<> 2018-10-22T123440.200.json
 
 ###
 
-POST http://localhost:3000/issues
+GET http://localhost:3000/solutions/5bcca034d07d9d6f24a23b87/parent
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Academy","status":0,"solutions":[]}
+{"parent":"5bcb19f0f0397d0f4caf7789","like":0}
 
-<> 2018-10-14T094647.200.json
+<> 2018-10-22T123426.200.json
 
 ###
 

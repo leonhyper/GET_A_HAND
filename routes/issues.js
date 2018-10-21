@@ -32,18 +32,6 @@ router.findAllIssues = (req, res) => {
 
 router.findById = (req, res) => {
 
-    // res.setHeader('Content-Type', 'application/json');
-    // var result = [];
-    // issues.find().forEach(function(obj){
-    //     if (obj._id.search(req.params.id) != -1)
-    //         result.push(obj);
-    // })
-    //     if(result!=null)
-    //         res.send(JSON.stringify(result,null,5));
-    //     else
-    //         res.send("Issue not found!");
-
-
     issues.find({ "_id" :req.params.id },function(err, issue) {
         if (err)
             res.send(err);
@@ -69,19 +57,6 @@ router.findByCate = (req, res) => {
         // return the donation
     });
 
-    // var result = [];
-    // var text = req.params.category;
-    // for(var obj in issues){
-    //     if(obj.category === text){
-    //         result.push(obj);
-    //     }
-    // }
-    //
-    // if (result != null)
-    //     res.send(JSON.stringify(result,null,5));
-    // else
-    //     res.send('Category NOT Found!!');
-
 }
 
 router.findByStatus = (req, res) => {
@@ -94,36 +69,15 @@ router.findByStatus = (req, res) => {
         else
             res.send(JSON.stringify(issue, null, 5));
     })
-    //  var result = [];
-    //  issues.forEach(function(issue){
-    //      if(issue.status.toString() == req.params.status){
-    //          result.push(issue);
-    //      }
-    //  })
-    //
-    // if (result != null)
-    //     res.send(JSON.stringify(result,null,5));
-    // else
-    //     res.send('Issues NOT Found!!');
 
 }
 router.addIssue = (req, res) => {
     //Add a new donation to our list
-    // var id = issues[issues.length-1].id+1; //Randomly generate an id
-    // var currentSize = issues.length;
-    //
-    // issues.push({"id" : id, "category" : req.body.category, "status" : false, "solution" : 0, "solutionList" : []});
-    //
-    // if((currentSize + 1) == issues.length)
-    //     res.json({ message: 'Issue Added Successfully!'});
-    // else
-    //     res.json({ message: 'Issue NOT Added!'});
     res.setHeader('Content-Type', 'application/json');
 
     var issue = new issues();
 
     issue.category = req.body.category;
-    // issue.issuesId = new mongoose.Types.ObjectId;
 
     issue.save(function(err) {
         if (err)
@@ -158,16 +112,6 @@ router.updateStatus = (req, res) =>{
 }
 
 router.deleteIssue = (req, res) =>{
-    //delete a certain issue by id
-    // var issue = getByValue(issues, req.params.id);
-    // var index = issues.indexOf(issue);
-    // var currentSize = issues.length;
-    // issues.splice(index, 1);
-    //
-    // if((currentSize - 1) == issues.length)
-    //     res.json({ message: 'Issue Deleted!'});
-    // else
-    //     res.json({ message: 'Issue NOT Deleted!'});
     issues.findByIdAndRemove(req.params.id, function(err) {
         if (err)
             res.json({ message: 'Issue NOT DELETED!', errmsg : err } );
@@ -246,9 +190,6 @@ router.increaseLike = (req,res) => {
             res.json({ message: 'Solution NOT Found!', errmsg : err });
         else{
             solution.like ++;
-            // solution.save(function (err) {
-            //     res.json({message: "Like successfully increased by 1.", data: solution});
-            // })
             solution.save(function(err){
                 if(err)
                     res.json({ message: 'Adding like failed!', errmsg : err } );
@@ -289,23 +230,6 @@ router.addSolution = (req,res) => {
         }
     })
 
-    // solution.save(function(err){
-    //     if(err){
-    //         res.json({ message: 'Solution NOT Added!', errmsg : err } );
-    //     }
-    //     else{
-    //         issues.findById(req.params.id, function(err,issue){
-    //             issue.solutions.push(solution.solutionId);
-    //             issue.save(function (err) {
-    //                 if(err)
-    //                     console.log(errmsg);
-    //             });
-    //             res.json({message: 'solution Successfully Added!', data: solution});
-    //         })
-    //     }
-    //
-    // })
-
 }
 
 // router.deleteSolution = (req,res) => {
@@ -337,20 +261,30 @@ router.getParentIssue = (req,res) => {
 router.deleteSolution = (req,res) => {
     res.setHeader('Content-Type', 'application/json');
 
-    solutions.remove({solutionId: req.params.id},function(err,solution){
-        var s = solution.solutionId;
+    solutions.findOne({solutionId: req.params.id},function (err,solution) {
         if(err)
-            res.json({ message: 'Solution Does Not Exist!', errmsg : err } );
-        else{
-            issues.update({"_id":solution.parent},{$pull:{solutions:s}},function(err,issue){
+            res.json({message:'Solution Not Exist',errmsg:err});
+        else
+            issues.update({_id:solution.parent},{$pull:{solutions:solution.solutionId}},function (err,issue) {
                 if(err)
                     res.send(err);
                 else{
-                    res.json({message:'wow',data:issue,solution});
+                    solutions.remove({solutionId: req.params.id},function (err,solution) {
+                        if(err)
+                            res.json({message:'Solution Not Deleted!',errmsg:err});
+                        else
+                            res.json({message:'Solution Successfully Deleted!',data:solution,issue});
+                    })
                 }
+
             })
-        }
+
+
     })
+
+    // solutions.findOne({solutionId: req.params.id},function (err,solution) {
+    //
+    // })
 
 }
 

@@ -37,8 +37,15 @@ app.post('/issues',issues.addIssue);
 app.delete('/issues/:id', issues.deleteIssue);
 
 app.get('/solutions', issues.findAllSolutions);
+app.get('/solutions/:id', issues.findSolutionById);
+app.get('/issues/:id/solutions', issues.findByParent);
+app.get('/solutions/:id/parent',issues.getParentIssue);
+
+app.put('/solutions/:id/like', issues.increaseLike);
 
 app.post('/solutions', issues.addSolution);
+
+app.delete('/solutions/:id', issues.deleteSolution);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

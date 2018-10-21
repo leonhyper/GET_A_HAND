@@ -1,0 +1,19 @@
+<h1>Cannot read property &#39;solutionId&#39; of undefined</h1>
+<h2></h2>
+<pre>TypeError: Cannot read property &#39;solutionId&#39; of undefined
+at H:\Web Application\GET_A_HAND\routes\issues.js:265: 28
+at H: \Web Application\GET_A_HAND\node_modules\mongoose\lib\model.js:4499: 16
+at model.Query.Query._deleteOne (H: \Web Application\GET_A_HAND\node_modules\mongoose\lib\query.js: 2477: 5)
+at model.Query.Query.deleteOne (H: \Web Application\GET_A_HAND\node_modules\mongoose\lib\query.js: 2464: 19)
+at Function.deleteOne (H: \Web Application\GET_A_HAND\node_modules\mongoose\lib\model.js: 1587: 13)
+at router.deleteSolution (H:\Web Application\GET_A_HAND\routes\issues.js:264: 15)
+at Layer.handle [as handle_request] (H: \Web Application\GET_A_HAND\node_modules\express\lib\router\layer.js: 95:5)
+at next (H: \Web Application\GET_A_HAND\node_modules\express\lib\router\route.js: 137: 13)
+at Route.dispatch (H: \Web Application\GET_A_HAND\node_modules\express\lib\router\route.js: 112: 3)
+at Layer.handle [as handle_request] (H: \Web Application\GET_A_HAND\node_modules\express\lib\router\layer.js: 95:5)
+at H: \Web Application\GET_A_HAND\node_modules\express\lib\router\index.js:281: 22
+at param (H: \Web Application\GET_A_HAND\node_modules\express\lib\router\index.js: 354: 14)
+at param (H:\Web Application\GET_A_HAND\node_modules\express\lib\router\index.js: 365: 14)
+at Function.process_params (H: \Web Application\GET_A_HAND\node_modules\express\lib\router\index.js: 410: 3)
+at next (H: \Web Application\GET_A_HAND\node_modules\express\lib\router\index.js: 275: 10)
+at H: \Web Application\GET_A_HAND\node_modules\express\lib\router\index.js: 635: 15</pre>

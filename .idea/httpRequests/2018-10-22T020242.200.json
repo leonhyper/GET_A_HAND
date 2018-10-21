@@ -1,0 +1,11 @@
+{
+  "message": "Solution Not Exist!",
+  "errmsg": {
+    "message": "Cast to ObjectId failed for value \"5bccbda3d4a0920068a9099\" at path \"solutionId\" for model \"solutions\"",
+    "name": "CastError",
+    "stringValue": "\"5bccbda3d4a0920068a9099\"",
+    "kind": "ObjectId",
+    "value": "5bccbda3d4a0920068a9099",
+    "path": "solutionId"
+  }
+}
