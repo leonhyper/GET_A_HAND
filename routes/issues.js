@@ -276,15 +276,8 @@ router.deleteSolution = (req,res) => {
                             res.json({message:'Solution Successfully Deleted!',data:solution,issue});
                     })
                 }
-
             })
-
-
     })
-
-    // solutions.findOne({solutionId: req.params.id},function (err,solution) {
-    //
-    // })
 
 }
 
