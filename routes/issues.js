@@ -1,13 +1,32 @@
 let issues = require('../models/issues');
 let solutions = require('../models/solutions');
 let express = require('express');
+var app = express();
 let router = express.Router();
 let mongoose = require('mongoose');
 let db = mongoose.connection;
 
+// *** config file *** //
+var config = require('../_config');
+// *** mongoose *** ///
+
+if (process.env.NODE_ENV == 'test') {
+    mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
+        if(err) {
+            console.log('Error connecting to the database. ' + err);
+        } else {
+            console.log('Connected to Database: ' + config.mongoURI[app.settings.env]);
+        }
+    });
+}
+
+
+var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139193.mlab.com:39193/issuesdb';
+
 var ObjectId = require('mongodb').ObjectId;
 
-mongoose.connect('mongodb://localhost:27017/issuesdb');
+mongoose.connect(mongodbUri);
+// mongoose.connect('mongodb://localhost:27017/issuesdb');
 
 db.on('error', function (err) {
     console.log('Unable to Connect to [ ' + db.name + ' ]', err);

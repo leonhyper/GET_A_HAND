@@ -1,3 +1,78 @@
+POST http://localhost:3000/solutions
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcdfa6d5b85ea05a8ad43ab","like":0}
+
+<> 2018-10-23T054655.200.json
+
+###
+
+POST http://localhost:3000/solutions
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcdfa6d5b85ea05a8ad43ab","like":0}
+
+###
+
+POST http://localhost:3000/solutions
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
+
+<> 2018-10-23T122849.200.json
+
+###
+
+POST http://localhost:3000/solutions
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
+
+<> 2018-10-23T122842.200.json
+
+###
+
+POST http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"category":"Business","status":0,"solutions":[]}
+
+<> 2018-10-23T122725.200.json
+
+###
+
+POST http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"category":"Academy","status":0,"solutions":[]}
+
+<> 2018-10-23T122714.200.json
+
+###
+
+POST http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"category":"Art","status":0,"solutions":[]}
+
+<> 2018-10-23T122701.200.json
+
+###
+
 DELETE http://localhost:3000/solutions/5bccc20c4edd4c504495ea79
 Accept: application/json
 Cache-Control: no-cache
@@ -440,83 +515,6 @@ Content-Type: application/json
 {"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 <> 2018-10-22T124152.200.json
-
-###
-
-POST http://localhost:3000/solutions
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T124145.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccabfa9ea1af31648742f3
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T124042.200.json
-
-###
-
-POST http://localhost:3000/solutions
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T124026.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccab35cb13fc2f7cacf627
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T123723.200.json
-
-###
-
-POST http://localhost:3000/solutions
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T123709.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bcca034d07d9d6f24a23b87
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19f0f0397d0f4caf7789","like":0}
-
-<> 2018-10-22T123440.200.json
-
-###
-
-GET http://localhost:3000/solutions/5bcca034d07d9d6f24a23b87/parent
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19f0f0397d0f4caf7789","like":0}
-
-<> 2018-10-22T123426.200.json
 
 ###
 

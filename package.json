@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "mocha test/routes/issues-test.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
+    "chai-things": "^0.2.0",
     "mocha": "^3.4.2"
   }
 }
