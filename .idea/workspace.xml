@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0df6d507-988a-451f-85df-1085c69fd93b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-10-22T011441.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-10-22T011727.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/issues.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/issues.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/routes/issues-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/routes/issues-test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -59,7 +56,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="12145" />
+          <entry key="js" value="12365" />
           <entry key="json" value="12" />
           <entry key="txt" value="17" />
           <entry key="www" value="3" />
@@ -68,7 +65,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="12" />
-          <entry key="JavaScript" value="12148" />
+          <entry key="JavaScript" value="12368" />
           <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
@@ -99,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/routes/issues-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+            <state relative-caret-position="463">
+              <caret line="80" column="18" lean-forward="true" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -109,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/models/issues.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -1569,12 +1566,12 @@
       <workItem from="1540225106423" duration="1255000" />
       <workItem from="1540283691823" duration="4324000" />
       <workItem from="1540291077048" duration="8630000" />
-      <workItem from="1540380047815" duration="1507000" />
+      <workItem from="1540380047815" duration="1996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161178000" />
+    <option name="totallyTimeSpent" value="161667000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1604,7 +1601,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006605" side_tool="true" weight="0.44192636" />
-      <window_info active="true" anchor="bottom" id="REST Client" order="11" sideWeight="0.4993395" visible="true" weight="0.44192636" />
+      <window_info anchor="bottom" id="REST Client" order="11" sideWeight="0.4993395" weight="0.44192636" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1745,7 +1742,7 @@
     <entry file="file://$PROJECT_DIR$/models/issues.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -1758,8 +1755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/routes/issues-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        <state relative-caret-position="463">
+          <caret line="80" column="18" lean-forward="true" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
         </state>
       </provider>
     </entry>
