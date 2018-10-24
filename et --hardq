@@ -1,0 +1,125 @@
+[33mcommit 7da0ce7bb41a4ee66f47443ee41197601e529cf7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mfindAllIssues-test[m[33m)[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 23 17:53:00 2018 +0800
+
+    findAllIssues endpoint tested
+
+[33mcommit 14f9f72353a26b61f12942c58390d56758288737[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Mon Oct 22 19:49:19 2018 +0800
+
+    API test setup
+
+[33mcommit 1651eb9c4abc88e8295560195e663c04b9ad29a7[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Mon Oct 22 02:17:20 2018 +0800
+
+    DeleteSolution and all functions completed
+
+[33mcommit d98e0a91649718c1b4bcc56723e84c4f1741eb99[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Sat Oct 20 21:30:38 2018 +0800
+
+    IncreaseLike
+
+[33mcommit 1c6890579efa36cb10c93437ece2e73064006a07[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Sat Oct 20 21:11:54 2018 +0800
+
+    GetParentIssue
+
+[33mcommit 3e990e8cac8b62e88e1b993e20a698cbe80ae5ec[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Wed Oct 17 22:30:43 2018 +0800
+
+    FindByParent
+
+[33mcommit a646a034df543ab158ce5e613ccc6ab9fe1cf4af[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 16 17:28:57 2018 +0800
+
+    FindSolutionById
+
+[33mcommit c7dfa9d6ae375770bb689190c1c41aedbbe0a2e0[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 16 16:57:41 2018 +0800
+
+    Model refactory and addSolution refactory
+
+[33mcommit 5d5427d79e5cbbe3af367248c24af37b9d4d63fe[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 16 06:21:51 2018 +0800
+
+    AddSolution
+
+[33mcommit d8503661312bd4d65a8689ca1323b1a4649db4b5[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Mon Oct 15 21:05:54 2018 +0800
+
+    FindAllSolutions
+
+[33mcommit 51f61b9032e728bc4384649edbee98dea0d414a5[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Fri Oct 12 23:11:55 2018 +0800
+
+    UpdateStatus refactory2
+
+[33mcommit 5d5c8a30e4b85d9747ac0a487144eca3e02d1934[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Wed Oct 10 20:00:49 2018 +0800
+
+    UpdateStatus refactory
+
+[33mcommit 3b0a1c83eca89b5094e8348746966b717a9c0c4d[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Wed Oct 10 19:53:15 2018 +0800
+
+    DeleteIssue refactory
+
+[33mcommit 3bd576271084942af5b1a63fc550ccbb1fce88ab[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Wed Oct 10 19:49:49 2018 +0800
+
+    AddIssue refactory
+
+[33mcommit fce931873a9a25629cc6429ad8b1e64a63b081cc[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Wed Oct 10 19:25:44 2018 +0800
+
+    FindByStatus refactory
+
+[33mcommit 46a675bacf43462738533ba7f79f1493e421547f[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Wed Oct 10 05:39:10 2018 +0800
+
+    FindByCate refactory
+
+[33mcommit a9f8374fe31f011ed573d8d62bac0c98b330b21f[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 9 20:58:26 2018 +0800
+
+    FindById refactory
+
+[33mcommit a75a431e167d0fcce9fadba04c4a13b815dfe29f[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 9 18:59:56 2018 +0800
+
+    FindAll refactory
+
+[33mcommit 33f3ad08ba999b9d71723be65613c3f5675da05d[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 9 18:53:11 2018 +0800
+
+    Access to mongodb
+
+[33mcommit 789de5c45c9669fca59adc15120f7c5184f8e950[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 9 18:37:14 2018 +0800
+
+    Issue model schema refactory
+
+[33mcommit dccaf968d7dd7289af4bfd8e11942c5354c21496[m
+Author: zhusheng <1013702057@qq.com>
+Date:   Tue Oct 9 18:02:05 2018 +0800
+
+    Initial project structure

@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'test';
 
-let datastore = require('../../models/issues');
+let issues = require('../../models/issues');
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 let server = require('../../bin/www');
@@ -14,21 +14,6 @@ chai.use(require('chai-things'));
 let _ = require('lodash' );
 
 describe('Issues', function (){
-    beforeEach(function(){
-        var datastore =[];
-        while(datastore.length > 0) {
-            datastore.pop();
-        }
-        datastore.push(
-            {_id: "5bcdfa555b85ea05a8ad43a9", category: 'Art', status: false, soluitons: []}
-        );
-        datastore.push(
-            {_id: "5bcdfa6d5b85ea05a8ad43ab", category: 'Business', status: false, soluitons: []}
-        );
-        datastore.push(
-            {_id: "5bcdfa615b85ea05a8ad43aa", category: 'Academy', status: false, soluitons: []}
-        );
-    });
 
     describe('GET /issues',  () => {
         it('should return all the issues in an array', function(done) {
@@ -42,11 +27,26 @@ describe('Issues', function (){
                         return { id: issue._id,
                             category: issue.category }
                     });
-                    expect(result).to.include( { id: "5bcdfa555b85ea05a8ad43a9", category: 'Art'  } );
-                    expect(result).to.include( { id: "5bcdfa615b85ea05a8ad43aa", category: 'Academy'  } );
-                    expect(result).to.include( { id: "5bcdfa6d5b85ea05a8ad43ab", category: 'Business'  } );
+                    expect(result).to.include( { id: "5bcf4dbd1e8bb84d200597fc", category: 'Art'  } );
+                    expect(result).to.include( { id: "5bcf4dbf1e8bb84d200597fd", category: 'Art'  } );
+                    expect(result).to.include( { id: "5bcf4dc71e8bb84d200597fe", category: 'Business'  } );
                     done();
                 });
         });
     });
+
+    describe('GET /issues/:id',()=>{
+        it('should return one issue with certain id',function(done){
+            chai.request(server)
+                .get('/issues/5bcf4dbd1e8bb84d200597fc')
+                .end(function (err,res) {
+                    expect(res).to.have.status(200);
+                    let result = _.map(res.body, (issue) => {
+                        return { _id: issue._id}
+                    });
+                    expect(result).to.include( { _id: "5bcf4dbd1e8bb84d200597fc" } );
+                    done();
+                })
+        })
+    })
 });

@@ -6,27 +6,18 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let db = mongoose.connection;
 
-// *** config file *** //
-var config = require('../_config');
-// *** mongoose *** ///
 
 if (process.env.NODE_ENV == 'test') {
-    mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
-        if(err) {
-            console.log('Error connecting to the database. ' + err);
-        } else {
-            console.log('Connected to Database: ' + config.mongoURI[app.settings.env]);
-        }
-    });
+    var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139883.mlab.com:39883/issues-test';
 }
-
-
-var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139193.mlab.com:39193/issuesdb';
-
-var ObjectId = require('mongodb').ObjectId;
+else{
+    var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139193.mlab.com:39193/issuesdb';
+}
 
 mongoose.connect(mongodbUri);
 // mongoose.connect('mongodb://localhost:27017/issuesdb');
+
+var ObjectId = require('mongodb').ObjectId;
 
 db.on('error', function (err) {
     console.log('Unable to Connect to [ ' + db.name + ' ]', err);
@@ -50,8 +41,9 @@ router.findAllIssues = (req, res) => {
 }
 
 router.findById = (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
 
-    issues.find({ "_id" :req.params.id },function(err, issue) {
+    issues.find({ _id :req.params.id },function(err, issue) {
         if (err)
             res.send(err);
         // return a suitable error message
