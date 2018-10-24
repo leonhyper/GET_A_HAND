@@ -90,4 +90,26 @@ describe('Issues', function () {
                 })
         })
     })
+
+    describe('GET/issues/solved/status',()=> {
+        it('should return all issues with certain status in array', function (done) {
+            chai.request(server)
+                .get('/issues/solved/0')
+                .end(function (err, res) {
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.be.a('array');
+                    expect(res.body.length).to.equal(3);
+                    let result = _.map(res.body, (issue) => {
+                        return {
+                            id: issue._id,
+                            status: issue.status
+                        }
+                    })
+                    expect(result).to.include({id: "5bcf4dbd1e8bb84d200597fc", status: false});
+                    expect(result).to.include({id: "5bcf4dbf1e8bb84d200597fd", status: false});
+                    expect(result).to.include({id: "5bcf4dc71e8bb84d200597fe", status: false});
+                    done();
+                })
+        })
+    })
 })
