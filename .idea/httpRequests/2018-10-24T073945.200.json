@@ -1,0 +1,8 @@
+{
+  "message": "Cast to ObjectId failed for value \"5bcdfa555b85ea05a8ad43\" at path \"_id\" for model \"issues\"",
+  "name": "CastError",
+  "stringValue": "\"5bcdfa555b85ea05a8ad43\"",
+  "kind": "ObjectId",
+  "value": "5bcdfa555b85ea05a8ad43",
+  "path": "_id"
+}

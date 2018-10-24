@@ -44,9 +44,11 @@ router.findById = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     issues.find({ _id :req.params.id },function(err, issue) {
-        if (err)
-            res.send(err);
-        // return a suitable error message
+        if (err){
+            res.status(404);
+            res.json({message:'Issue Not Found!',errmsg:err});
+            // return a suitable error message
+        }
         else
             res.send(JSON.stringify(issue,null,5));
         // return the donation

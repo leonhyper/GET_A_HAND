@@ -48,5 +48,14 @@ describe('Issues', function (){
                     done();
                 })
         })
+        it('should return err when request id is invalid',function(done){
+            chai.request(server)
+                .get('/issues/10000000')
+                .end(function (err,res) {
+                    expect(res).to.have.status(404);
+                    expect(res.body).to.have.property('message','Issue Not Found!' ) ;
+                    done();
+                })
+        })
     })
 });
