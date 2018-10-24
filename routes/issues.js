@@ -78,9 +78,11 @@ router.findByStatus = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     issues.find({ status :req.params.status },function(err, issue) {
-        if (err)
+        if (err){
+            res.status(404);
             res.send(err);
-        // return a suitable error message
+            // return a suitable error message
+        }
         else
             res.send(JSON.stringify(issue, null, 5));
     })

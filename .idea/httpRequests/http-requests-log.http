@@ -1,3 +1,25 @@
+GET http://localhost:3000/issues/solved/2
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T093511.404.json
+
+###
+
+GET http://localhost:3000/issues/solved/2
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T093410.200.json
+
+###
+
 GET http://localhost:3000/issues/category/asad
 Accept: application/json
 Cache-Control: no-cache
@@ -513,26 +535,6 @@ Cache-Control: no-cache
 Content-Type: application/json
 
 {"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b4
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T020816.200.json
 
 ###
 

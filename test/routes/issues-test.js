@@ -111,5 +111,13 @@ describe('Issues', function () {
                     done();
                 })
         })
+        it('should return 404 when request status is illegal', function (done) {
+            chai.request(server)
+                .get('/issues/solved/2')
+                .end(function (err, res) {
+                    expect(res).to.have.status(404);
+                    done();
+                })
+        })
     })
 })
