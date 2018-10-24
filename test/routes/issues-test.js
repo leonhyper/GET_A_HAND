@@ -80,5 +80,14 @@ describe('Issues', function () {
                     done();
                 })
         })
+        it('should return err when request category is invalid', function (done) {
+            chai.request(server)
+                .get('/issues/category/ABC')
+                .end(function (err, res) {
+                    expect(res.body).to.be.a('array');
+                    expect(res.body.length).to.equal(0);
+                    done();
+                })
+        })
     })
 })

@@ -62,8 +62,10 @@ router.findByCate = (req, res) => {
     var whereStr = {'category':{$regex:req.params.category,$options:'i'}};
 
     issues.find(whereStr ,function(err, issue) {
-        if (err)
-        res.send(err);
+        if (err){
+            res.status(404);
+            res.json({message:'Issues Not Found!',errmsg:err});
+        }
         // return a suitable error message
         else
             res.send(JSON.stringify(issue,null,5));

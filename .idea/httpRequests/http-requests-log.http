@@ -1,3 +1,113 @@
+GET http://localhost:3000/issues/category/asad
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T091625.200.json
+
+###
+
+GET http://localhost:3000/issues/category/asad
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T091544.200.json
+
+###
+
+GET http://localhost:3000/issues/category/asad
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T080450.200.json
+
+###
+
+GET http://localhost:3000/issues/category/asad
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T080335.200.json
+
+###
+
+GET http://localhost:3000/issues/category/asad
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T080255.200.json
+
+###
+
+GET http://localhost:3000/issues/category/,
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T080057.200.json
+
+###
+
+GET http://localhost:3000/issues/category/1
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T080052.200.json
+
+###
+
+GET http://localhost:3000/issues/category/O
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T080003.200.json
+
+###
+
+GET http://localhost:3000/issues/category/A
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T075959.200.json
+
+###
+
+GET http://localhost:3000/issues/category/ABC
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T075942.200.json
+
+###
+
 GET http://localhost:3000/issues/100000000
 Accept: application/json
 Cache-Control: no-cache
@@ -423,108 +533,6 @@ Content-Type: application/json
 {"parent":"5bcb19d4f0397d0f4caf7786","like":0}
 
 <> 2018-10-22T020816.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b4
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-POST http://localhost:3000/solutions
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T020251.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T020242.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbda3d4a0920068a9099d
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T015557.200.json
-
-###
-
-POST http://localhost:3000/solutions
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T015547.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccb4a6710530584ce55653
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T015132.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccb4a6710530584ce55653
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-POST http://localhost:3000/solutions/5bccb4a6710530584ce55653
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T011732.404.html
 
 ###
 
