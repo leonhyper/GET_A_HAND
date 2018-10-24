@@ -1,3 +1,63 @@
+PUT http://localhost:3000/issues/5bcdfa615b85ea05a8ad43aa/1
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T110115.200.json
+
+###
+
+GET http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T101208.200.json
+
+###
+
+GET http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+###
+
+GET http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+###
+
+GET http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+<> 2018-10-24T094557.200.json
+
+###
+
+GET http://localhost:3000/issues
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+
+###
+
 GET http://localhost:3000/issues/solved/2
 Accept: application/json
 Cache-Control: no-cache
@@ -470,66 +530,6 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/solutions/5bccc1a9ebaaf60ea0dcf725
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-DELETE http://localhost:3000/solutions/5bccc1a9ebaaf60ea0dcf725
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T021312.200.json
-
-###
-
-POST http://localhost:3000/solutions
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T021258.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccb4a6710530584ce5565
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-DELETE http://localhost:3000/solutions/5bccb4a6710530584ce55653
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-<> 2018-10-22T021139.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcb19d4f0397d0f4caf7786","like":0}
-
-###
-
-DELETE http://localhost:3000/solutions/5bccbf4bffa5601c845684b4
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json

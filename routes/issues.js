@@ -113,6 +113,7 @@ router.updateStatus = (req, res) =>{
     //     res.json({ message : 'Update Successful.Issue set solved' , issue : issue });
     // }else
     //     res.send('Issue NOT Found - Update NOT Successful!!');
+    res.setHeader('Content-Type', 'application/json');
     issues.findById(req.params.id, function(err,issue){
         if (err)
             res.json({ message: 'Donation NOT Found!', errmsg : err } );

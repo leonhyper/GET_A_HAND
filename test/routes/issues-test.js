@@ -14,6 +14,44 @@ chai.use(require('chai-things'));
 let _ = require('lodash' );
 
 describe('Issues', function () {
+    beforeEach(function (done) {
+        var issue1 = new issues({
+            status: false,
+            solutions: [],
+            _id: "5bcf4dbd1e8bb84d200597fc",
+            category: "Art",
+        })
+        issue1.save(function(){
+            done();
+        });
+    })
+    beforeEach(function (done) {
+        var issue2 = new issues({
+            status: false,
+            solutions: [],
+            _id: "5bcf4dbf1e8bb84d200597fd",
+            category: "Art",
+        })
+        issue2.save(function(){
+            done();
+        });
+    })
+    beforeEach(function (done) {
+        var issue3 = new issues({
+            status: false,
+            solutions: [
+                "5bcf4def1e8bb84d20059800",
+                "5bcf4df21e8bb84d20059802"
+            ],
+            _id: "5bcf4dc71e8bb84d200597fe",
+            category: "Business",
+        })
+        issue3.save(function(){
+            done();
+        });
+    })
+
+
 
     describe('GET /issues', () => {
         it('should return all the issues in an array', function (done) {
@@ -116,6 +154,18 @@ describe('Issues', function () {
                 .get('/issues/solved/2')
                 .end(function (err, res) {
                     expect(res).to.have.status(404);
+                    done();
+                })
+        })
+    })
+
+    describe('PUT/issues/:id/:status',()=>{
+        it('should update the status and display the modified issue',function (done) {
+            chai.request(server)
+                .put('/issues/5bcf4dbd1e8bb84d200597fc/1')
+                .end(function (err,res) {
+                    expect(res.body).to.have.property('message', 'Issue Successfully Set Solved!');
+                    expect(res.body.data).to.have.property('status',true);
                     done();
                 })
         })
