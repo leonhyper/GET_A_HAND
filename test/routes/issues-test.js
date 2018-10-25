@@ -204,6 +204,15 @@ describe('Issues', function () {
             issues.collection.drop();
             done();
         })
+        it('should return an error message when id is invalid',function (done) {
+            chai.request(server)
+                .delete('/issues/10000000')
+                .end(function (err,res) {
+                    expect(res).to.have.status(404);
+                    expect(res.body).to.have.property('message', 'Issue NOT DELETED!');
+                    done();
+                })
+        })
         it('should return a message when a issue is deleted',function (done) {
             chai.request(server)
                 .delete('/issues/5bcf4dbd1e8bb84d200597fc')

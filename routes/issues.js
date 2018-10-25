@@ -131,8 +131,10 @@ router.updateStatus = (req, res) =>{
 
 router.deleteIssue = (req, res) =>{
     issues.findByIdAndRemove(req.params.id, function(err) {
-        if (err)
-            res.json({ message: 'Issue NOT DELETED!', errmsg : err } );
+        if (err) {
+            res.status(404);
+            res.json({message: 'Issue NOT DELETED!', errmsg: err});
+        }
         else
             res.json({ message: 'Issue Successfully Deleted!'});
     });
