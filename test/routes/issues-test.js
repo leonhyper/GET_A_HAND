@@ -14,6 +14,10 @@ chai.use(require('chai-things'));
 let _ = require('lodash' );
 
 describe('Issues', function () {
+    before(function (done) {
+        issues.collection.drop();
+        done();
+    })
     beforeEach(function (done) {
         var issue1 = new issues({
             status: false,
@@ -54,10 +58,6 @@ describe('Issues', function () {
 
 
     describe('GET /issues', () => {
-        before(function (done) {
-            issues.collection.drop();
-            done();
-        })
         it('should return all the issues in an array', function (done) {
             chai.request(server)
                 .get('/issues')
@@ -80,6 +80,7 @@ describe('Issues', function () {
     });
 
     describe('GET /issues/:id', () => {
+
         it('should return one issue with certain id', function (done) {
             chai.request(server)
                 .get('/issues/5bcf4dbd1e8bb84d200597fc')
@@ -198,9 +199,38 @@ describe('Issues', function () {
         })
     })
 
+    describe('DELETE/issues/:id',()=>{
+        before(function (done) {
+            issues.collection.drop();
+            done();
+        })
+        it('should return a message when a issue is deleted',function (done) {
+            chai.request(server)
+                .delete('/issues/5bcf4dbd1e8bb84d200597fc')
+                .end(function (err,res) {
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.have.property('message', 'Issue Successfully Deleted!');
+                    done();
+                })
+        })
+        after(function (done) {
+            chai.request(server)
+                .get('/issues')
+                .end(function (err,res) {
+                    expect(res.body.length).to.equal(2);
+                    let result = _.map(res.body, (issue) => {
+                        return {_id: issue._id}
+                    });
+                    expect(result).to.not.include({id: "5bcf4dbd1e8bb84d200597fc"});
+                    done();
+                })
+        })
+    })
+
     describe('POST/issues',()=>{
         it('should return a message when an issue is successfully added',function (done) {
             let issue = {
+                _id: "5bd1ef71a7acc445686cc0e1",
                 category: 'Academy' ,
                 status: 0,
                 solutions: []
@@ -223,5 +253,6 @@ describe('Issues', function () {
             })
         })
     })
+
 
 })
