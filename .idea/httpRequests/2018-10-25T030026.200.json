@@ -1,0 +1,10 @@
+{
+  "message": "Like successfully increased by 1.",
+  "data": {
+    "like": 4,
+    "_id": "5bcdfac05b85ea05a8ad43ae",
+    "parent": "5bcdfa555b85ea05a8ad43a9",
+    "solutionId": "5bcdfac05b85ea05a8ad43af",
+    "__v": 0
+  }
+}

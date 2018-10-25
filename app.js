@@ -14,7 +14,11 @@ const issues = require("./routes/issues");
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
+if (process.env.NODE_ENV |= 'test') {
+    app.use(logger('dev'));
+    // console.log(process.env.NODE_ENV);
+}
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

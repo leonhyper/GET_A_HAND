@@ -1,0 +1,23 @@
+[
+  {
+    "like": 0,
+    "_id": "5bcdfaba5b85ea05a8ad43ac",
+    "parent": "5bcdfa555b85ea05a8ad43a9",
+    "solutionId": "5bcdfaba5b85ea05a8ad43ad",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bcdfac05b85ea05a8ad43ae",
+    "parent": "5bcdfa555b85ea05a8ad43a9",
+    "solutionId": "5bcdfac05b85ea05a8ad43af",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5bceee0f00ad70226ca42702",
+    "parent": "5bcdfa6d5b85ea05a8ad43ab",
+    "solutionId": "5bceee0f00ad70226ca42703",
+    "__v": 0
+  }
+]

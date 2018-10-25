@@ -51,7 +51,13 @@ describe('Issues', function () {
         });
     })
 
+
+
     describe('GET /issues', () => {
+        before(function (done) {
+            issues.collection.drop();
+            done();
+        })
         it('should return all the issues in an array', function (done) {
             chai.request(server)
                 .get('/issues')
@@ -191,4 +197,31 @@ describe('Issues', function () {
                 })
         })
     })
+
+    describe('POST/issues',()=>{
+        it('should return a message when an issue is successfully added',function (done) {
+            let issue = {
+                category: 'Academy' ,
+                status: 0,
+                solutions: []
+            };
+            chai.request(server)
+                .post('/issues')
+                .send(issue)
+                .end(function (err,res) {
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.have.property('message', 'Issue Successfully Added!');
+                    done();
+                })
+            after(function (done) {
+                chai.request(server)
+                    .get('/issues')
+                    .end(function (err,res) {
+                        expect(res.body.length).to.equal(4);
+                        done();
+                    })
+            })
+        })
+    })
+
 })
