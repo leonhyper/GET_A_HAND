@@ -4,6 +4,7 @@ Schema = mongoose.Schema;
 let SolutionSchema = new mongoose.Schema({
         solutionId: Schema.Types.ObjectId,
         parent: String,
+        text: String,
         like: {type: Number, default: 0},
     },
     { collection: 'Solutions' });

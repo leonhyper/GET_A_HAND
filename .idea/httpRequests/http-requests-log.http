@@ -1,77 +1,11 @@
-PUT http://localhost:3000/solutions/5bcdfac05b85ea05a8ad43af/like
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
+{"parent":"5c0e9756989afc43441167eb","text":"He is an artist"}
 
-<> 2018-10-25T030026.200.json
-
-###
-
-PUT http://localhost:3000/solutions/5bcdfac05b85ea05a8ad43af/like
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
-
-<> 2018-10-25T015920.200.json
-
-###
-
-PUT http://localhost:3000/solutions/5bcdfac05b85ea05a8ad43af/like
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
-
-<> 2018-10-25T015905.200.json
-
-###
-
-PUT http://localhost:3000/solutions/5bcdfac05b85ea05a8ad43af/like
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
-
-<> 2018-10-25T015853.200.json
-
-###
-
-GET http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
-
-<> 2018-10-25T015822.200.json
-
-###
-
-DELETE http://localhost:3000/solutions/5bd0b2634766317d20b6781d
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
-
-<> 2018-10-25T015756.200.json
-
-###
-
-GET http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
-
-<> 2018-10-25T015727.200.json
+<> 2018-12-18T021735.200.json
 
 ###
 
@@ -80,51 +14,42 @@ Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bcdfa555b85ea05a8ad43a9","like":0}
+{"parent":"5c0e9756989afc43441167eb","text":"He is an artist"}
 
-<> 2018-10-25T015651.200.json
+<> 2018-12-18T021716.200.json
 
 ###
 
-GET http://localhost:3000/solutions/5bcdfac05b85ea05a8ad43af/parent
+GET http://localhost:3000/parent/5c0e9756989afc43441167eb
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"parent":"5c0e9756989afc43441167eb","text":"He is a painter"}
 
-<> 2018-10-25T015607.200.json
+<> 2018-12-18T010629.200.json
 
 ###
 
-GET http://localhost:3000/solutions/5bcdfac05b85ea05a8ad43af/parent\
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"parent":"5c0e9756989afc43441167eb","text":"He is a painter"}
+
+<> 2018-12-18T010611.200.json
 
 ###
 
-GET http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9/solutions
+POST http://localhost:3000/solutions
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"parent":"5c0e9756989afc43441167eb","text":"He is an artist"}
 
-<> 2018-10-25T015525.200.json
-
-###
-
-GET http://localhost:3000/solutions/5bcdfaba5b85ea05a8ad43ad
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"category":"Art","status":0,"solutions":[]}
-
-<> 2018-10-25T015501.200.json
+<> 2018-12-18T125531.200.json
 
 ###
 
@@ -133,31 +58,315 @@ Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"name":"leon","pass":"1013702057"}
 
-<> 2018-10-25T015445.200.json
+<> 2018-12-18T125346.200.json
 
 ###
 
-DELETE http://localhost:3000/issues/5bd0b1ba4766317d20b6781b
+POST http://localhost:3000/user/validateName/leo
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
-
-<> 2018-10-25T015424.200.json
+{"name":"leon","pass":"1013702057"}
 
 ###
 
-GET http://localhost:3000/issues/5bd0b1ba4766317d20b6781b
+POST http://localhost:3000/user/validateName/leon
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"name":"leon","pass":"1013702057"}
 
-<> 2018-10-25T015418.200.json
+<> 2018-12-08T020732.200.json
+
+###
+
+POST http://localhost:3000/user/user/validateName/leon
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-08T020722.404.html
+
+###
+
+POST http://localhost:3000/user/validate/leon/1013702057
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T064601.200.json
+
+###
+
+POST http://localhost:3000/user/validate/leon/1013702057
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T064239.200.json
+
+###
+
+POST http://localhost:3000/user/validate/leon/1013702057
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T064222.200.json
+
+###
+
+POST http://localhost:3000/user/validate/leon/1013702057
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T064125.200.json
+
+###
+
+POST http://localhost:3000/user/validate/leon/1013702057
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T064118.200.json
+
+###
+
+POST http://localhost:3000/user/validate/leon/1013702057
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T062219.200.json
+
+###
+
+POST http://localhost:3000/user/validate/leon/1
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T062213.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T061513.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"101370205"}
+
+<> 2018-12-07T055559.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"101370205"}
+
+<> 2018-12-07T055122.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"101370205"}
+
+<> 2018-12-07T055055.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T055037.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T055000.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"101370205"}
+
+<> 2018-12-07T054945.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"101370205"}
+
+<> 2018-12-07T054937.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"101370205"}
+
+<> 2018-12-07T054709.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T054701.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T054233.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T054222.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T054219.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T054216.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T054215.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T053600.200.json
+
+###
+
+POST http://localhost:3000/user/validate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T044016.200.json
+
+###
+
+POST http://localhost:3000/user/register
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name":"leon","pass":"1013702057"}
+
+<> 2018-12-07T044000.200.json
 
 ###
 
@@ -166,86 +375,64 @@ Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"category":"Academy","text":"Who is the author of 'Macbeth'","status":true}
 
-<> 2018-10-25T015402.200.json
+<> 2018-12-05T104702.200.json
 
 ###
 
-PUT http://localhost:3000/issues/5bcdfa615b85ea05a8ad43aa/1
+PUT http://localhost:3000/issues/5bfea7b2253cc6317c74ffe5/0
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T015324.200.json
+<> 2018-12-04T020937.200.json
 
 ###
 
-PUT http://localhost:3000/issues/5bcdfa615b85ea05a8ad43aa/0
+GET http://localhost:3000/issues/5bfea7b2253cc6317c74ffe5/0
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T015316.200.json
+<> 2018-12-04T020927.404.html
 
 ###
 
-GET http://localhost:3000/issues/solved/1
+GET http://localhost:3000/issues/5bfea7b2253cc6317c74ffe5
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T015248.200.json
+<> 2018-12-04T020638.200.json
 
 ###
 
-GET http://localhost:3000/issues/solved/0
+GET http://localhost:3000/issues/5bfea7b2253cc6317c74ffe5
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T015232.200.json
+<> 2018-12-04T020637.200.json
 
 ###
 
-GET http://localhost:3000/issues/category/AR
+PUT http://localhost:3000/issues/5bfea7b2253cc6317c74ffe5/0
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T015206.200.json
-
-###
-
-GET http://localhost:3000/issues/category/Art
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"Art","status":0,"solutions":[]}
-
-<> 2018-10-25T015150.200.json
-
-###
-
-GET http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"Art","status":0,"solutions":[]}
-
-<> 2018-10-25T015127.200.json
+<> 2018-12-04T020623.200.json
 
 ###
 
@@ -254,64 +441,75 @@ Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T015112.200.json
+<> 2018-12-04T020430.200.json
 
 ###
 
-GET http://localhost:3000/solutions/5bcdfaba5b85ea05a8ad43ad/parent
+GET http://localhost:3000/issues
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T014226.200.json
+<> 2018-12-02T015608.200.json
 
 ###
 
-GET http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9/solutions
+GET http://localhost:3000/issues
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T014146.200.json
+<> 2018-12-01T105120.200.json
 
 ###
 
-GET http://localhost:3000/solutions/5bcdfac05b85ea05a8ad43af
+GET http://localhost:3000/issues
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T014116.200.json
+<> 2018-11-30T054952.200.json
 
 ###
 
-GET http://localhost:3000/solutions
+PUT http://localhost:3000/issues/5c0050b3e965e96978d50316/1
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T014044.200.json
+<> 2018-11-30T054938.200.json
 
 ###
 
-DELETE http://localhost:3000/issues/5bd0ae604766317d20b6781a
+PUT http://localhost:3000/issues/5c0050b3e965e96978d50316/1
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T014010.200.json
+<> 2018-11-30T054936.200.json
+
+###
+
+PUT http://localhost:3000/issues/5c0050b3e965e96978d50316/1
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"category":"Academy","status":true}
+
+<> 2018-11-30T044933.200.json
 
 ###
 
@@ -320,86 +518,9 @@ Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"category":"Art","status":0,"solutions":[]}
+{"category":"Academy","status":true}
 
-<> 2018-10-25T013944.200.json
-
-###
-
-PUT http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9/0
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T013840.200.json
-
-###
-
-PUT http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9/1
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T013828.200.json
-
-###
-
-GET http://localhost:3000/issues/solved/0
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T013753.200.json
-
-###
-
-GET http://localhost:3000/issues/solved/1
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T013743.200.json
-
-###
-
-GET http://localhost:3000/issues/category/AR
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T013706.200.json
-
-###
-
-GET http://localhost:3000/issues/category/Art
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T013642.200.json
-
-###
-
-GET http://localhost:3000/issues/5bcdfa555b85ea05a8ad43a9
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T013621.200.json
+<> 2018-11-30T044851.200.json
 
 ###
 
@@ -408,135 +529,20 @@ Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+{"category":"Academy","status":1}
 
-<> 2018-10-25T013552.200.json
+<> 2018-11-30T044827.200.json
 
 ###
 
-PUT http://localhost:3000/issues/5bcdfa615b85ea05a8ad43aa/2
+POST http://localhost:3000/issues
 Accept: application/json
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
+{"category":"Academy","status":1}
 
-<> 2018-10-25T010326.200.json
-
-###
-
-PUT http://localhost:3000/issues/5bcdfa615b85ea05a8ad43a/1
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-25T123818.200.json
-
-###
-
-PUT http://localhost:3000/issues/5bcdfa615b85ea05a8ad43aa/1
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-24T110115.200.json
-
-###
-
-GET http://localhost:3000/issues
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-24T101208.200.json
-
-###
-
-GET http://localhost:3000/issues
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-###
-
-GET http://localhost:3000/issues
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-###
-
-GET http://localhost:3000/issues
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-24T094557.200.json
-
-###
-
-GET http://localhost:3000/issues
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-###
-
-GET http://localhost:3000/issues/solved/2
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-24T093511.404.json
-
-###
-
-GET http://localhost:3000/issues/solved/2
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-24T093410.200.json
-
-###
-
-GET http://localhost:3000/issues/category/asad
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-24T091625.200.json
-
-###
-
-GET http://localhost:3000/issues/category/asad
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"parent":"5bcf4dc71e8bb84d200597fe","like":0}
-
-<> 2018-10-24T091544.200.json
+<> 2018-11-30T044822.200.json
 
 ###
 

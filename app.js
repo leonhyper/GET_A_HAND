@@ -1,3 +1,6 @@
+
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,6 +12,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 const issues = require("./routes/issues");
+const user = require("./routes/user");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -18,7 +22,17 @@ if (process.env.NODE_ENV |= 'test') {
     app.use(logger('dev'));
     // console.log(process.env.NODE_ENV);
 }
-
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.header('Access-Control-Allow-Credentials','true');
+    if (req.method === "OPTIONS")
+        res.send(200);
+    else
+        next();
+};
+app.use(allowCrossDomain);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -28,10 +42,15 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
+app.post('/user/validate/:name/:pass', user.validate);
+app.post('/user/register', user.register);
+app.post('/user/validateName/:name', user.validateName);
+
 app.get('/issues', issues.findAllIssues);
 app.get('/issues/:id', issues.findById);
 app.get('/issues/category/:category', issues.findByCate);
 app.get('/issues/solved/:status', issues.findByStatus);
+app.get('/issues/one/:id', issues.findOne);
 
 
 app.put('/issues/:id/:status', issues.updateStatus);
@@ -44,6 +63,7 @@ app.get('/solutions', issues.findAllSolutions);
 app.get('/solutions/:id', issues.findSolutionById);
 app.get('/issues/:id/solutions', issues.findByParent);
 app.get('/solutions/:id/parent',issues.getParentIssue);
+app.get('/parent/:pid',issues.findByPid)
 
 app.put('/solutions/:id/like', issues.increaseLike);
 

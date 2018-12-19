@@ -7,15 +7,16 @@ let mongoose = require('mongoose');
 let db = mongoose.connection;
 
 
-if (process.env.NODE_ENV == 'test') {
-    var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139883.mlab.com:39883/issues-test';
-}
-else{
-    var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139193.mlab.com:39193/issuesdb';
-}
-
-mongoose.connect(mongodbUri);
+// if (process.env.NODE_ENV == 'test') {
+//     var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139883.mlab.com:39883/issues-test';
+// }
+// else{
+//     var mongodbUri ='mongodb://issuesdb:1013702057zs@ds139193.mlab.com:39193/issuesdb';
+// }
+//
+// mongoose.connect(mongodbUri);
 // mongoose.connect('mongodb://localhost:27017/issuesdb');
+mongoose.connect('mongodb://issuesdb:1013702057zs@ds139193.mlab.com:39193/issuesdb');
 
 var ObjectId = require('mongodb').ObjectId;
 
@@ -53,6 +54,16 @@ router.findById = (req, res) => {
             res.send(JSON.stringify(issue,null,5));
         // return the donation
     });
+}
+
+router.findOne = (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    issues.findOne({_id: req.params.id}, (err, issue) => {
+        if (err) {
+            res.json(err)
+        }
+        res.send(issue)
+    })
 }
 
 router.findByCate = (req, res) => {
@@ -95,6 +106,7 @@ router.addIssue = (req, res) => {
     var issue = new issues();
 
     issue.category = req.body.category;
+    issue.text = req.body.text;
 
     issue.save(function(err) {
         if (err)
@@ -121,9 +133,13 @@ router.updateStatus = (req, res) =>{
             issue.status = req.params.status;
             issue.save(function (err) {
                 if (err)
-                    res.json({ message: 'Issue NOT Updated to Solved!', errmsg : err } );
-                else
+                    res.json({ message: 'Issue NOT Updated!', errmsg : err } );
+                else if  (req.params.status==1){
                     res.json({ message: 'Issue Successfully Set Solved!', data: issue });
+                }else if (req.params.status==0){
+                    res.json({ message: 'Issue Successfully Set unsolved!', data: issue });
+                }
+
             });
         }
     })
@@ -169,6 +185,7 @@ router.findByParent = (req,res) =>{
         parent:{
             id: String,
             category: String,
+            body: String,
             status: Boolean
         },
         solutionList: []
@@ -183,6 +200,7 @@ router.findByParent = (req,res) =>{
                 var i = 0;
                 result.parent.id = issue._id;
                 result.parent.category = issue.category;
+                result.parent.body = issue.text;
                 result.parent.status = issue.status;
                 issue.solutions.forEach(function(id){
                     // console.log(id);
@@ -228,6 +246,7 @@ router.addSolution = (req,res) => {
 
     solution.parent = req.body.parent;
     solution.solutionId = new mongoose.Types.ObjectId;
+    solution.text = req.body.text;
 
     issues.findById(req.body.parent,function(err,issue){
         if(err)
@@ -300,6 +319,18 @@ router.deleteSolution = (req,res) => {
     })
 
 }
+
+router.findByPid = (req,res) => {
+    res.setHeader('Content-Type', 'application/json');
+
+    solutions.find({parent: req.params.pid}, (err, solution) => {
+        if (err) {
+            res.json(err)
+        }
+        res.send(solution)
+    })
+}
+
 
 
 module.exports = router;

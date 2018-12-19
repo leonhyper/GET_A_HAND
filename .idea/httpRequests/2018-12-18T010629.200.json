@@ -1,0 +1,18 @@
+[
+  {
+    "like": 0,
+    "_id": "5c17d5028de043676834fb06",
+    "parent": "5c0e9756989afc43441167eb",
+    "solutionId": "5c17d5028de043676834fb07",
+    "text": "He is an artist",
+    "__v": 0
+  },
+  {
+    "like": 0,
+    "_id": "5c17d783b7b3823d54a15627",
+    "parent": "5c0e9756989afc43441167eb",
+    "solutionId": "5c17d783b7b3823d54a15628",
+    "text": "He is a painter",
+    "__v": 0
+  }
+]

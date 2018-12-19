@@ -1,8 +1,0 @@
-{
-  "message": "Cast to boolean failed for value \"2\" at path \"status\" for model \"issues\"",
-  "name": "CastError",
-  "stringValue": "\"2\"",
-  "kind": "boolean",
-  "value": "2",
-  "path": "status"
-}

@@ -1,0 +1,23 @@
+[
+  {
+    "status": false,
+    "solutions": [],
+    "_id": "5bfea7b2253cc6317c74ffe5",
+    "category": "Art",
+    "__v": 0
+  },
+  {
+    "status": false,
+    "solutions": [],
+    "_id": "5c005096e965e96978d50315",
+    "category": "Academy",
+    "__v": 0
+  },
+  {
+    "status": true,
+    "solutions": [],
+    "_id": "5c0050b3e965e96978d50316",
+    "category": "Academy",
+    "__v": 0
+  }
+]
